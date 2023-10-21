@@ -1,0 +1,527 @@
+.container {
+  display: flex;
+  margin: auto;
+  background-color: #F5F5F5;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(193, 73, 73, 0.5);
+  animation-name: slideInUp;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 1200px){
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img {
+   padding-right: 100px;
+  }
+  .product {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px){
+  .product {
+    width: 50%;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 100px;
+ 
+  & .slideshow-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding-bottom: 10px;
+  }
+
+  & span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: #C70101
+  }
+
+  & span:hover {
+    background-color: red;
+  }
+
+  & span:active {
+    background-color: red;
+    transform: translateY(4px);
+  }
+
+  & span:focus {
+    background-color: red;
+  }
+
+
+  & #image {
+    width: 100%;
+    height: 90%;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  & h2 {
+    color: black
+  }
+
+  & details {
+    margin-top: 20px;
+    padding: 5px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+  }
+
+  & details>summary>span {
+    color: black;
+  }
+
+  & details>p {
+    color: black;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: small;
+  }
+
+  & details>summary {
+    list-style: none;
+    position: relative;
+
+  }
+
+  & .arrow {
+    position: absolute;
+    right: 0;
+  }
+
+  & details>summary .arrow::before {
+    content: '+';
+  }
+
+  & details[open]>summary .arrow::before {
+    content: '–';
+  }
+}
+
+.sizes {
+  background-color: #FADADD;
+  border-radius: 10px;
+  padding: 20px;
+
+  & h3 {
+    color: black;
+    padding: 10px;
+  }
+
+  & .size-selector {
+    padding-left: 10px;
+  }
+
+  & .size-selector label {
+    display: inline-block;
+    padding: 5px;
+    margin-bottom: 5px;
+    color: black;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+  }
+
+  & .size-selector input[type=radio]:checked+label {
+    background-color: #f00;
+    color: white;
+    border: 1px solid red;
+  }
+
+  & select {
+    color: black;
+    padding: 7px;
+    width: 100px;
+  }
+
+  & option {
+    color: black;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
+
+  & button.truck-button {
+    margin-top: 20px;
+  }
+}
+
+
+.truck-button {
+  --color: #fff;
+  --background: #C70101;
+  --tick: #16bf78;
+  --base: #0d0f18;
+  --wheel: #2b3044;
+  --wheel-inner: #646b8c;
+  --wheel-dot: #fff;
+  --back: #C70101;
+  --back-inner: #C70101;
+  --back-inner-shadow: #5f1419;
+  --front: #a6accd;
+  --front-shadow: #535a79;
+  --front-light: #fff8b1;
+  --window: #2b3044;
+  --window-shadow: #404660;
+  --street: white;
+  --street-fill: #C70101;
+  --box: #dcb97a;
+  --box-shadow: #b89b66;
+  padding: 12px 0;
+  width: 172px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  border: 2px solid #fff;
+  outline: none;
+  color: var(--color);
+  background: var(--background);
+  border-radius: var(--br, 5px);
+  -webkit-tap-highlight-color: transparent;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx, 0deg)) translateZ(0);
+  transition: transform 0.5s, border-radius 0.3s linear var(--br-d, 0s);
+}
+
+.truck-button:before,
+.truck-button:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6px;
+  display: block;
+  background: var(--b, var(--street));
+  transform-origin: 0 100%;
+  transform: rotateX(90deg) scaleX(var(--sy, 1));
+}
+
+.truck-button:after {
+  --sy: var(--progress, 0);
+  --b: var(--street-fill);
+}
+
+.truck-button .default,
+.truck-button .success {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  opacity: var(--o, 1);
+  transition: opacity 0.3s;
+}
+
+.truck-button .success {
+  --o: 0;
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+}
+
+.truck-button .success svg {
+  width: 12px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: top;
+  fill: none;
+  margin: 7px 0 0 4px;
+  stroke: var(--tick);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: var(--offset, 16px);
+  transition: stroke-dashoffset 0.4s ease 0.45s;
+}
+
+.truck-button .truck {
+  position: absolute;
+  width: 72px;
+  height: 28px;
+  transform: rotateX(90deg) translate3d(var(--truck-x, 4px), calc(var(--truck-y-n, -26) * 1px), 12px);
+}
+
+.truck-button .truck:before,
+.truck-button .truck:after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: var(--l, 18px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: inset 0 0 0 2px var(--wheel), inset 0 0 0 4px var(--wheel-inner);
+  background: var(--wheel-dot);
+  transform: translateY(calc(var(--truck-y) * -1px)) translateZ(0);
+}
+
+.truck-button .truck:after {
+  --l: 54px;
+}
+
+.truck-button .truck .wheel,
+.truck-button .truck .wheel:before {
+  position: absolute;
+  bottom: var(--b, -6px);
+  left: var(--l, 6px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--wheel);
+  transform: translateZ(0);
+}
+
+.truck-button .truck .wheel {
+  transform: translateY(calc(var(--truck-y) * -1px)) translateZ(0);
+}
+
+.truck-button .truck .wheel:before {
+  --l: 35px;
+  --b: 0;
+  content: '';
+}
+
+.truck-button .truck .front,
+.truck-button .truck .back,
+.truck-button .truck .box {
+  position: absolute;
+}
+
+.truck-button .truck .back {
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 47px;
+  height: 28px;
+  border-radius: 1px 1px 0 0;
+  background: linear-gradient(68deg, var(--back-inner) 0%, var(--back-inner) 22%, var(--back-inner-shadow) 22.1%, var(--back-inner-shadow) 100%);
+}
+
+.truck-button .truck .back:before,
+.truck-button .truck .back:after {
+  content: '';
+  position: absolute;
+}
+
+.truck-button .truck .back:before {
+  left: 11px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  border-radius: 0 1px 0 0;
+  background: var(--back);
+}
+
+.truck-button .truck .back:after {
+  border-radius: 1px;
+  width: 73px;
+  height: 2px;
+  left: -1px;
+  bottom: -2px;
+  background: var(--base);
+}
+
+.truck-button .truck .front {
+  left: 47px;
+  bottom: -1px;
+  height: 22px;
+  width: 24px;
+  -webkit-clip-path: polygon(55% 0, 72% 44%, 100% 58%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(55% 0, 72% 44%, 100% 58%, 100% 100%, 0 100%, 0 0);
+  background: linear-gradient(84deg, var(--front-shadow) 0%, var(--front-shadow) 10%, var(--front) 12%, var(--front) 100%);
+}
+
+.truck-button .truck .front:before,
+.truck-button .truck .front:after {
+  content: '';
+  position: absolute;
+}
+
+.truck-button .truck .front:before {
+  width: 7px;
+  height: 8px;
+  background: #fff;
+  left: 7px;
+  top: 2px;
+  -webkit-clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(59deg, var(--window) 0%, var(--window) 57%, var(--window-shadow) 55%, var(--window-shadow) 100%);
+}
+
+.truck-button .truck .front:after {
+  width: 3px;
+  height: 2px;
+  right: 0;
+  bottom: 3px;
+  background: var(--front-light);
+}
+
+.truck-button .truck .box {
+  width: 13px;
+  height: 13px;
+  right: 56px;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 1px;
+  overflow: hidden;
+  transform: translate(calc(var(--box-x, -24) * 1px), calc(var(--box-y, -6) * 1px)) scale(var(--box-s, 0.5));
+  opacity: var(--box-o, 0);
+  background: linear-gradient(68deg, var(--box) 0%, var(--box) 50%, var(--box-shadow) 50.2%, var(--box-shadow) 100%);
+  background-size: 250% 100%;
+  background-position-x: calc(var(--bx, 0) * 1%);
+}
+
+.truck-button .truck .box:before,
+.truck-button .truck .box:after {
+  content: '';
+  position: absolute;
+}
+
+.truck-button .truck .box:before {
+  content: '';
+  background: rgba(255, 255, 255, .2);
+  left: 0;
+  right: 0;
+  top: 6px;
+  height: 1px;
+}
+
+.truck-button .truck .box:after {
+  width: 6px;
+  left: 100%;
+  top: 0;
+  bottom: 0;
+  background: var(--back);
+  transform: translateX(calc(var(--hx, 0) * 1px));
+}
+
+.truck-button.animation {
+  --rx: -90deg;
+  --br: 0;
+}
+
+.truck-button.animation .default {
+  --o: 0;
+}
+
+.truck-button.animation.done {
+  --rx: 0deg;
+  --br: 5px;
+  --br-d: 0.2s;
+}
+
+.truck-button.animation.done .success {
+  --o: 1;
+  --offset: 0;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.size-chart .hidden {
+  display: none;
+}
+
+/* CSS để tạo lớp mờ phía sau bảng và điều chỉnh kích thước */
+.size-chart .overlay {
+  position: fixed;
+  top: 17%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  background-color: #F5F5F5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border-radius: 5px;
+  animation-name: slideInUp;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  border: 2px solid black;
+  overflow-x: auto;
+}
+
+/* CSS để tạo nút close */
+.size-chart .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: black;
+  background-color: #FADADD;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* CSS để điều chỉnh kích thước bảng và căn giữa */
+.size-chart table {
+  
+  width: 100%;
+  
+  text-align: center;
+  /* Điều chỉnh kích thước theo ý muốn */
+  margin: 0 auto;
+  /* Căn giữa bảng theo chiều ngang */
+  & tr:nth-child(even) {background-color: white;}
+
+  & th {
+    background-color: black;
+    padding: 5px;
+  }
+  & td {
+    padding: 5px;
+    color: black;
+  }
+}

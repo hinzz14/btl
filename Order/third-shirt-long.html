@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manutd | Order</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="../img/manutd-logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/chung .css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/header-footer.css">
+  <link rel="stylesheet" href="../css/Order.css">
+  <script src="../js/chung.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
+
+</head>
+
+<body>
+  <nav>
+    <div class="logo" style="display: flex;align-items: center;">
+      <span style="margin-left: 20px;"><a href="../Home.html"><img src="../img/manutd-logo.png" alt="#"></a></span>
+    </div>
+    <div class="hamburger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../Home.html">Home</a></li>
+      <li><a href="../player.html">Players</a></li>
+      <li><a href="../topscores.html">Goals</a></li>
+      <li><a href="../Kits.html">Kits</a></li>
+      <li><a href="#bottom" class="Contact">Contact Us</a></li>
+      <li><a href="../Login.html"><button class="login-button">Login</button></a></li>
+    </ul>
+  </nav>
+  <script src="../js/nav.js"></script>
+  <div class="container">
+    <div class="img">
+      <img id="image" src="../img/kits/third-shirt-long.jpg" alt="">
+      <div class="slideshow-buttons">
+        <span tabindex="0" onclick="changeImage('../img/kits/third-shirt-long.jpg')"></span>
+        <span tabindex="0" onclick="changeImage('../img/kits/third-shirt-long-front.jpg')"></span>
+        <span tabindex="0" onclick="changeImage('../img/kits/third-shirt-long-back.jpg')"></span>
+      </div>
+    </div>
+    <script src="../js/Order.js"></script>
+    <div class="product">
+      <h2>Manchester United Third Shirt long sleeve </h2>
+      <span style="color: green;">Available</span>
+      <br>
+      <h2>Your price: &euro;120</h2>
+      <br>
+      <div class="sizes">
+        <h3>Size: </h3>
+        <div class="size-selector">
+          <input type="radio" name="size" id="size1" value="XS" hidden>
+          <label for="size1">XS</label>
+
+          <input type="radio" name="size" id="size2" value="S" hidden>
+          <label for="size2">S</label>
+
+          <input type="radio" name="size" id="size3" value="M" hidden>
+          <label for="size3">M</label>
+
+          <input type="radio" name="size" id="size4" value="L" hidden>
+          <label for="size4">L</label>
+
+          <input type="radio" name="size" id="size5" value="XL" hidden checked>
+          <label for="size5">XL</label>
+
+          <input type="radio" name="size" id="size6" value="2XL" hidden>
+          <label for="size6">2XL</label>
+
+          <input type="radio" name="size" id="size7" value="3XL" hidden>
+          <label for="size7">3XL</label>
+
+          <input type="radio" name="size" id="size8" value="4XL" hidden>
+          <label for="size8">4XL</label>
+
+        </div>
+        <table>
+          <tr>
+            <td>
+              <h3>Quantity: </h3>
+            </td>
+            <td>
+              <select name="numbers" id="numbers">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </td>
+            <td>
+              <a style="color: blue; padding-left: 20px; font-size: small;" href="#" id="showTableLink">SIZE CHART</a>
+            </td>
+          </tr>
+        </table>
+        <button class="truck-button">
+          <span class="default">Complete Order</span>
+          <span class="success">
+            Order Placed
+            <svg viewbox="0 0 12 10">
+              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+            </svg>
+          </span>
+          <div class="truck">
+            <div class="wheel"></div>
+            <div class="back"></div>
+            <div class="front"></div>
+            <div class="box"></div>
+          </div>
+        </button>
+        <script src="../js/button-truck.js"></script>
+        <details>
+          <summary>
+            <span>Shipping: </span>
+            <span class="arrow"></span>
+          </summary>
+          <p>This item will ship within 3 business days</p>
+        </details>
+        <details>
+          <summary>
+            <span>Description: </span>
+            <span class="arrow"></span>
+          </summary>
+          <p>Celebrating a half-century of the iconic red devil. Clean and classic, this long sleeve Manchester United jersey from adidas lets one of football's most recognisable symbols really shine with an eye-catching embroidered finish. Breathable mesh panels and moisture-absorbing AEROREADY make this shirt ideal for staying comfortable off the pitch. Made with 100% recycled materials, this product represents just one of our solutions to help end plastic waste.</p>
+        </details>
+      </div>
+    </div>
+    <div class="size-chart">
+      <div id="overlay" class="overlay">
+        <div id="tableContainer" class="hidden" style="width: 70%; height: 70%;">
+          <div class="close-button" id="closeTable">Đóng</div>
+          <h1 style="color: black;">ADIDAS MEN'S CLOTHING</h1>
+          <table>
+            <tr>
+              <th>SIZE</th>
+              <th>XS</th>
+              <th>S</th>
+              <th>M</th>
+              <th>L</th>
+              <th>XL</th>
+              <th>2XL</th>
+              <th>3XL</th>
+              <th>4XL</th>
+            </tr>
+            <tr>
+              <td>CHEST (CM)</td>
+              <td>92-82</td>
+              <td>88-94</td>
+              <td>91-102</td>
+              <td>103-111</td>
+              <td>112-121</td>
+              <td>122-132</td>
+              <td>133-144</td>
+              <td>148-163</td>
+            </tr>
+            <tr>
+              <td>CHEST (IN)</td>
+              <td>31"-33"</td>
+              <td>34"-37"</td>
+              <td>37"-40"</td>
+              <td>40"-44"</td>
+              <td>44"-48"</td>
+              <td>48"-52"</td>
+              <td>53"-58"</td>
+              <td>58"-64"</td>
+            </tr>
+            <tr>
+              <td>WAIST (CM)</td>
+              <td>71-75</td>
+              <td>76-82</td>
+              <td>83-90</td>
+              <td>91-99</td>
+              <td>100-109</td>
+              <td>110-121</td>
+              <td>122-134</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>WAIST (IN)</td>
+              <td>27"-29"</td>
+              <td>30"-32"</td>
+              <td>32"-35"</td>
+              <td>35"-39"</td>
+              <td>39"-43"</td>
+              <td>43"-47"</td>
+              <td>48"-53"</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>HIP (CM)</td>
+              <td>82-86</td>
+              <td>87-93</td>
+              <td>94-101</td>
+              <td>102-110</td>
+              <td>111-119</td>
+              <td>120-128</td>
+              <td>129-138</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>HIP (IN)</td>
+              <td>32"-34"</td>
+              <td>35"-37"</td>
+              <td>37"-40"</td>
+              <td>40"-44"</td>
+              <td>44"-48"</td>
+              <td>48"-51"</td>
+              <td>51"-56"</td>
+              <td>-</td>
+            </tr>
+          </table>
+          <br>
+          <h1 style="color: black;">ADIDAS SOCKS</h1>
+          <table>
+            <tr>
+              <th>SIZE</th>
+              <th>XS</th>
+              <th>S</th>
+              <th>M</th>
+              <th>L</th>
+              <th>XL</th>
+            </tr>
+            <tr>
+              <td>UK SHOE SIZE</td>
+              <td>2.5-4</td>
+              <td>4.5-6</td>
+              <td>6.5-8</td>
+              <td>8.5-10</td>
+              <td>10.5-12</td>
+            </tr>
+            <tr>
+              <td>USA SHOE SIZE</td>
+              <td>3-4.5</td>
+              <td>5-6.5</td>
+              <td>7-8.5</td>
+              <td>9-10.5</td>
+              <td>11-12.5</td>
+            </tr>
+            <tr>
+              <td>EURO SHOE SIZE</td>
+              <td>34-36</td>
+              <td>37-39</td>
+              <td>40-42</td>
+              <td>43-45</td>
+              <td>46-48</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <script>
+        const showTableLink = document.getElementById('showTableLink');
+        const overlay = document.getElementById('overlay');
+        const tableContainer = document.getElementById('tableContainer');
+        const closeTable = document.getElementById('closeTable');
+
+        showTableLink.addEventListener('click', function (event) {
+          event.preventDefault();
+          tableContainer.style.display = 'block';
+          overlay.style.display = 'flex';
+        });
+
+        closeTable.addEventListener('click', function () {
+          tableContainer.style.display = 'none';
+          overlay.style.display = 'none';
+        });
+      </script>
+    </div>
+  </div>
+  <footer>
+    <div class="card" id="bottom">
+      <h3 style="color: white;">Contact us:</h3>
+      <a href="https://www.facebook.com/lou1s.p" class="socialContainer containerOwn" target="_blank">
+        <i class="fa-brands fa-facebook socialIcon"></i>
+      </a>
+      <a href="https://www.instagram.com/_lou1s.p/" class="socialContainer containerOne" target="_blank">
+        <i class="fa-brands fa-instagram socialIcon"></i>
+      </a>
+      <a href="https://twitter.com/ManUtd" class="socialContainer containerTwo" target="_blank">
+        <i class="fa-brands fa-twitter socialIcon"></i>
+      </a>
+      <a href="https://www.tiktok.com/@manutd" class="socialContainer containerThree" target="_blank">
+        <i class="fa-brands fa-tiktok socialIcon"></i>
+      </a>
+      <a href="https://www.youtube.com/@manutd" class="socialContainer containerFour" target="_blank">
+        <i class="fa-brands fa-youtube socialIcon"></i>
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>

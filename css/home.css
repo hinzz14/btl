@@ -1,0 +1,119 @@
+.vid {
+    align-items: center;
+    justify-content: center;
+}
+.video video {
+    filter: brightness(50%);
+}
+.tieude {
+    position: absolute;
+    top: 15%;
+    left: 19%;
+    right: 15%;
+}
+@media screen and (max-width:1200px){
+    .tieude {
+        top: 10%;
+    }
+}
+@media screen and (max-width:1000px){
+    .tieude {
+        top: 7%;
+    }
+}
+@media screen and (max-width:800px){
+    .tieude {
+        top: 7%;
+        left: 13%;
+    }
+    h1 span.hide-on-mobile {
+        display: none;
+    }
+    .item2 {
+        display: none;
+    }
+    .grid-container {
+        grid-template-rows: repeat(3);
+    }
+    .grid-item.d.hl {
+        grid-column: 1 / span 3;
+    }
+    .grid-item.ct {
+        grid-column: 1 / span 3;
+        display: block;
+    }
+}
+@media screen and (max-width:750px){
+    .tieude {
+        top: 3%;
+    }
+}
+
+
+.tieude h1 span {
+    color: red;
+    font-size: 60px;
+    width: 100%;
+    letter-spacing: 0px;
+    font-weight: 900;
+}
+
+#contain-iframe{
+    width: 100%; 
+    padding-bottom: 56.25%; 
+    position: relative;
+}
+#main-contain-img{
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;
+    border:none;
+    width: 100%;
+    height: 100%;
+}
+.grid-container {
+    padding-top: 10px;
+    & img {
+    width: 100%;
+}
+    & h1 {
+        text-align: left;
+        color: red;
+        font-size: 30px;
+        width: 100%;
+        letter-spacing: 0px;
+        font-weight: 900;
+        border-bottom: 2px solid black;
+    }
+    display: grid;
+    grid-template-columns: repeat(4);
+    grid-template-rows: repeat(4);
+    gap: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.grid-item {
+    text-align: center;
+    transition: transform 0.3s;
+    border-radius: 15px;
+    & video {
+        max-width: 100%;
+    }
+    & img {
+        border-radius: 15px;
+    }
+    & h3 {
+        color: black;
+        padding: 5px;
+    }
+}
+.grid-item.d:hover {
+    transform: scale(1.1);
+}
+.item1 {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+.item2 {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}

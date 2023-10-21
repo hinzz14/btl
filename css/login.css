@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400");
+
+body,
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  background: #2c3338;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  border-radius: 9px;
+  border-top: 10px solid #C70101;
+  border-bottom: 10px solid #C70101;
+  width: 400px;
+  height: 500px;
+}
+
+.box h4 {
+  font-family: "Source Sans Pro", sans-serif;
+  color:#C70101;
+  font-size: 20px;
+  margin-top: 94px;
+}
+
+.box h4 span {
+  color: #dfdeee;
+  font-weight: lighter;
+}
+
+.box h5 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 13px;
+  color: #2c3338;
+  letter-spacing: 1.5px;
+  margin-top: -15px;
+  margin-bottom: 70px;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+  display: block;
+  margin: 20px auto;
+  background-color: #fff;
+  border: 1px solid #C70101;
+  border-radius: 5px;
+  padding: 14px 10px;
+  width: 320px;
+  outline: 0;
+  color: black;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+::-webkit-input-placeholder {
+  color: #C70101;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+  border: 1px solid #C70101;
+}
+
+a {
+  color:#C70101;
+  text-decoration: none;
+}
+.btn1 {
+  border: 0;
+  background: #C70101;
+  color: #dfdeee;
+  border-radius: 7px;
+  width: 340px;
+  height: 49px;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn1:hover {
+  background: red;
+}
+
+.forgetpass {
+  position: relative;
+  float: right;
+  right: 28px;
+}
